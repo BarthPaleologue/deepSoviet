@@ -29,6 +29,15 @@ h1 {
     letter-spacing: .5em;
 }
 
+h2 {
+    font-family: Kremlin;
+    font-size: 500%;
+    color: red;
+    text-align: center;
+    -webkit-text-stroke: 2px black;
+    letter-spacing: .5em;
+}
+
 .upload-btn-wrapper {
     margin: 0 auto !important;
     position: relative;
