@@ -75,7 +75,8 @@
 
         var image;
         $("#img_selector").on("change", e => {
-            console.log(e);
+            $(".upload-btn-wrapper").addClass("down");
+
             $("#status").fadeOut(0);
             earrape.load();
             anthem.load();
@@ -138,8 +139,6 @@
             }
 
             predictions = null;
-
-            $(".upload-btn-wrapper").addClass("down");
         }
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
