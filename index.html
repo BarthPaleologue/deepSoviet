@@ -60,6 +60,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.5"></script>
     <script>
+        $("body").css("height", $(window).height());
+
         const anthem = new Audio('anthems/anthem.mp3');
         const earrape = new Audio('anthems/earrape.mp3');
 
@@ -85,7 +87,10 @@
                 $("#image").attr("src", reader.result);
                 $("#image").fadeIn(100, () => {
                     setTimeout(() => $("#image").css("margin-left", ($(window).width() - $("#image").width()) / 2), 10);
-                    request();
+                    setTimeout(() => {
+                        request();
+                    }, 30);
+
                 });
             }
 
