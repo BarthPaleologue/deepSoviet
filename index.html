@@ -55,7 +55,7 @@
         <input type="file" id="img_selector" />
     </div>
 
-    <p id="version">deepSoviet<sub>v1.0</sub></p>
+    <p id="version">deepSoviet<sub>v1.1</sub></p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.5"></script>
@@ -68,7 +68,7 @@
 
         var model;
         (async function getModel() {
-            model = await tf.loadModel("TFJS/model.json");
+            model = await tf.loadModel("TFJS7/model.json");
             console.log(model);
             $("#loading-overlay").fadeOut();
         })();
@@ -142,6 +142,19 @@
             $(".upload-btn-wrapper").addClass("down");
         }
     </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91827071-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-91827071-2');
+    </script>
+
 </body>
 
 
