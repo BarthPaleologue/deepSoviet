@@ -16,6 +16,7 @@ const actions = [
     "dénonce son voisin",
     "essaye de comprendre son propre code",
     "consulte votre dossier",
+    "utilises votre webcam"
 ]
 
 /*  [AhjcjNzzjdOjzbMzjbdAejeLxjiY]
