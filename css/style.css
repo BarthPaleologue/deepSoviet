@@ -13,6 +13,10 @@
     src: url("../font/Red\ October.ttf");
 }
 
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
 body {
     background: url("../bg.jpg");
     background-size: cover;
@@ -42,36 +46,56 @@ h2 {
     letter-spacing: .5em;
 }
 
-.upload-btn-wrapper {
-    margin: 0 auto !important;
+.file-upload {
     position: relative;
+    display: block;
 }
 
-.btn {
-    border: 2px solid red;
-    color: red;
+.file-upload__label {
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    padding: .7em 1.3em;
     font-family: Russian;
-    background-color: white;
-    padding: 8px 20px;
-    border-radius: 8px;
+    font-weight: bolder;
     font-size: 20px;
-    font-weight: bold;
-    width: 200px;
-    height: 75px;
+    color: red;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    border: 2px solid red;
+    transform: scale(1);
+    transition: .25s;
+    animation: pulse 1s infinite;
 }
 
-.upload-btn-wrapper input[type=file] {
-    font-size: 100px;
+.file-upload__label:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.file-upload__input {
     position: absolute;
     left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1;
+    width: 0;
+    height: 100%;
     opacity: 0;
 }
 
-.upload-btn-wrapper,
-.upload-btn-wrapper input[type=file] {
-    width: 200px;
-    height: 75px;
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, .5);
+    }
+    70% {
+        box-shadow: 0 0 15px 15px rgba(255, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 5px 0 rgba(255, 0, 0, 0);
+    }
 }
 
 #image-container {
@@ -167,6 +191,7 @@ h2 {
 
 #angerRed {
     color: red;
+    font-family: Kremlin;
 }
 
 #loader {

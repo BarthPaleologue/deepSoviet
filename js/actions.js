@@ -1,5 +1,5 @@
 Array.prototype.getRandomIndex = function() {
-    return this[Math.floor(Math.random() * this.length)]
+    return this[Math.floor(Math.random() * this.length)];
 }
 const actions = [
     "envahit la Pologne",
@@ -16,8 +16,9 @@ const actions = [
     "dénonce son voisin",
     "essaye de comprendre son propre code",
     "consulte votre dossier",
-    "utilises votre webcam"
-]
+    "consulte votre historique",
+    "utilise votre webcam"
+];
 
 /*  [AhjcjNzzjdOjzbMzjbdAejeLxjiY]
 
