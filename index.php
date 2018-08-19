@@ -35,6 +35,10 @@
 
     <h1>Deep Soviet</h1>
 
+    <div id="flag">
+        <a href="en.php"><img src="english.jpg"/></a>
+    </div>
+
     <p id="status"></p>
 
 
