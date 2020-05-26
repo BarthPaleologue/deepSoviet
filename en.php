@@ -8,6 +8,7 @@
     <meta name="description" content="Your cat ? Your little brother ? This lamp ? Are they communists ? Find out with Deep Soviet !" />
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
     <title>Deep Soviet - Online Communism Detector</title>
     <link rel="icon" href="deepSoviet.ico" />
     <link rel="stylesheet" href="css/style.css" />
@@ -59,7 +60,7 @@
         <input id="img_selector" class="file-upload__input" type="file" name="file-upload">
     </div>
 
-    <p id="version">deepSoviet<sub>v1.2.1</sub></p>
+    <p id="version">deepSoviet<sub>v1.2.2</sub></p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.5"></script>
@@ -93,9 +94,9 @@
             reader.onload = e => {
                 $("#image").attr("src", reader.result);
                 $("#image").fadeIn(100, () => {
-                    setTimeout(() => $("#image").css("margin-left", ($(window).width() - $("#image").width()) / 2), 10);
-                    setTimeout(() => request(), 30);
-
+                    $("#image").css({
+                        "margin-left": ($(window).width() - $("#image").width()) / 2
+                    }, setTimeout(() => request(), 100));
                 });
             }
             reader.readAsDataURL($("#img_selector")[0].files[0]);

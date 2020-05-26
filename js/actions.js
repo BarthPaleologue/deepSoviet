@@ -3,7 +3,7 @@ Array.prototype.getRandomIndex = function() {
 }
 const actions = [
     "envahit la Pologne",
-    "répends l'idéologie",
+    "répand l'idéologie",
     "met en commun les moyens de production",
     "construit un goulag",
     "organise la propagande",
